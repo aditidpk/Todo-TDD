@@ -23,11 +23,14 @@ export default class TodoList extends Component {
                 <h1>
                     Todo List
                 </h1>
-                What needs to be done:
+                Task to be done:
                 <input
                     type="text"
+                    autoFocus
+                    className="new-todo"
                     onChange={(e)=>this.setState({ newItem:e.target.value })}
                     name="name"
+                    placeholder="What needs to be done?"
                 />
                 <button onClick={this.addItemToList}>Add Task</button>
                 <h3>
